@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+:root {
+  --hdr: #0B2540;
+  --side: #0F2B46;
+  --sideA: #1B3F5E;
+  --bg: #F4F6F9;
+  --card: #ffffff;
+  --bd: #E5E8EC;
+  --ink: #0F172A;
+  --mut: #64748B;
+  --mut2: #94A3B8;
+  --cy: #0EA5C9;
+  --cyT: #E0F4FA;
+  --p1: #DC2626;
+  --p2: #EA580C;
+  --p3: #D97706;
+  --p4: #64748B;
+  --ok: #16A34A;
+  --paper: var(--bg);
+  --surface: var(--card);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+/* MOX Design System Utility Classes */
+
+.mox-hdr {
+  background-color: var(--hdr);
+  color: #ffffff;
+}
+
+.mox-card {
+  background-color: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+
+.mox-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  border: 1px solid var(--bd);
+  background: #ffffff;
+  color: var(--ink);
+  font-family: inherit;
+  line-height: 1.2;
+  transition: all 0.15s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.mox-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.mox-btn-pri {
+  background-color: var(--hdr);
+  color: #ffffff;
+  border-color: var(--hdr);
+}
+
+.mox-btn-pri:hover {
+  background-color: #15385a;
+  border-color: #15385a;
+  color: #ffffff;
+}
+
+.mox-btn-cy {
+  background-color: var(--cy);
+  color: #ffffff;
+  border-color: var(--cy);
+}
+
+.mox-btn-cy:hover {
+  background-color: #0891b2;
+  border-color: #0891b2;
+  color: #ffffff;
+}
+
+.mox-btn-ok {
+  background-color: var(--ok);
+  color: #ffffff;
+  border-color: var(--ok);
+}
+
+.mox-btn-ok:hover {
+  background-color: #15803d;
+  border-color: #15803d;
+  color: #ffffff;
+}
+
+.mox-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.mox-pill-cyan {
+  background-color: var(--cyT);
+  color: #0b7c99;
+  border: 1px solid #bfe3ee;
+}
+
+.mox-pill-red {
+  background-color: #fdecec;
+  color: var(--p1);
+  border: 1px solid #fecaca;
+}
+
+.mox-pill-green {
+  background-color: #e8f7ee;
+  color: var(--ok);
+  border: 1px solid #bbf7d0;
+}
+
+.mox-pill-amber {
+  background-color: #fef5e1;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.mox-weak-box {
+  background-color: #fef4f4;
+  border: 1px solid #F7CACA;
+  border-radius: 10px;
+  color: #b91c1c;
+}
+
+.mox-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--bd);
+  border-radius: 8px;
+  font-family: inherit;
+  background: #ffffff;
+  color: var(--ink);
+  font-size: 13px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.mox-input:focus {
+  border-color: var(--cy);
+  box-shadow: 0 0 0 3px rgba(14, 165, 201, 0.15);
+}
+
+.mox-table th {
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  color: var(--ink);
+  font-weight: 700;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--bd);
+  background-color: #fafbfc;
+}
+
+.mox-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #F0F2F5;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.mox-table tr:hover td {
+  background-color: #f7fbfd;
+}
+
+/* MOX Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #CBD5E1 transparent;
+}
+
+/* Animations */
+@keyframes scan {
+  0% {
+    top: 0%;
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.2;
+  }
+}
+
+@keyframes indeterminate {
+  0% {
+    transform: translateX(-100%) scaleX(0.2);
+  }
+  50% {
+    transform: translateX(30%) scaleX(0.7);
+  }
+  100% {
+    transform: translateX(250%) scaleX(0.3);
+  }
+}
+
+.animate-scan {
+  position: absolute;
+  animation: scan 2s ease-in-out infinite alternate;
+}
+
+.animate-indeterminate {
+  animation: indeterminate 1.6s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}

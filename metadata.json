@@ -1,0 +1,6 @@
+{
+  "name": "DocuMind AI",
+  "description": "Intelligent Document Extraction Portal that extracts tabular data from uploaded Images and PDFs using Google Gemini AI, featuring editable verification, sensitive data masking, and Excel/CSV export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
